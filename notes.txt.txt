@@ -156,3 +156,31 @@ svg.select("rect")
         .enter()
         .append("rect")
         
+
+
+
+------------------------
+TRANSLATE AND POSITION
+--------------------------
+
+- with translate, we can make a partivular element, move in x or y direction
+
+    it takes x and y as args as well as value
+
+    d3.select("svg")
+    .append("rect)
+    .attr("x",10)
+    .attr("y",10)
+    .attr("width",100)
+    .attr("height",100)
+    .attr("fill",blue)
+    .attr("transform","translate(100,100)")
+
+    here translate(100,100)
+        first 100 is x, the position of rect is 100
+        second 100 is y, 
+
+    it was earlier 10,10
+    but after translate it became 110,110
+
+    
