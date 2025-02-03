@@ -31,6 +31,8 @@ const S02API = () => {
             <E08reverseGraph/>
             <br/>
             <E09createDomElementsFromData/>
+            <br/>
+            <E11styleBarGraphInD3/>
         </div>
     )
 }
