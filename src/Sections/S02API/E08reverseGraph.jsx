@@ -16,24 +16,24 @@ const E08reverseGraph = () => {
         const allRectData = svg.selectAll('rect').data(barData)
         
         allRectData
-            .attr("width", rectWidth)
-            .attr("stroke-width",3)
-            .attr("stroke-dasharray","5 5")
-            .attr("stroke", "#553159")
-            .attr("fill","pink")
-            .attr("x", (d,i)=>{
-                // console.log("meow ",{d},{i})
-                return i* rectWidth
+        .attr("width", rectWidth)
+        .attr("stroke-width",3)
+        .attr("stroke-dasharray","5 5")
+        .attr("stroke","red")
+        .attr("fill","pink")
+        .attr("x",(d,i)=>{
+            console.log("inside allRectData for rectangle",{d},{i})
+                return i*rectWidth
             })
-            .attr("y", (d)=>{
-                const barY = totalHeight - d
-                // console.log("meow y",{d},{barY})
+        .attr("y",(d,i)=>{
+                const barY = totalHeight - d;
+                console.log('inside reversegraphh, calculating y', barY);
                 return barY
-            })
-            .attr("height", (d)=>{
-                return d
-            })
-
+        })
+        .attr("height",(d)=>{
+            return d
+        })
+        
 
     })
 

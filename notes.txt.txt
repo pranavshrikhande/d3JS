@@ -74,7 +74,63 @@ Finishing touches
 
         d3.select('svg').selectAll('rect').data(bar_data)
 
-        
+------------------
+Attr and style
+-------------------
+
+attr: takes a selected element and can set its attribute
+        i,e border, text can change it
+
+        data:
+        bar_data=[10,20,30,10,40];
+
+        <svg>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+        </svg>
+
+    svg.selectAll('rect').data(bar_data)
+        .attr('name','')
+
+    now attr takes two args 
+        1st is name of attribute that needs to be changed
+        2nd is value
+                this can be constant i.e height, width
+                or we can pass a function (d,i)
+                        d: is data related to each element
+                        i: index
+                
+                    that means
+
+        <svg>           d  | i
+            <rect/>     10 | 0      0*50=0
+            <rect/>     20 | 1      1*50=50
+            <rect/>     40 | 2      2*50=100
+            <rect/>     30 | 3      3*50=150
+            <rect/>     10 | 4      4*50=200
+        </svg>
+
+        now using these we can change
+
+     now lets see example where we have to change x axis
+
+    const barWidth=50; we see how these are set in rect's above
+     
+    .attr('x',(d,i)=> i*50)
 
 
-    
+    now we need to have it for height
+
+    .attr('height',(d)=>d)   
+
+    now to fill color
+
+    .attr("fill","pink")
+
+
+    Now we see our graph is inverted, 
+
+to fix this we have to make calculation, so that it substracts the height from total height that is set

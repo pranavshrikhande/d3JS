@@ -9,26 +9,24 @@ const E07attStyle = () => {
     const rectWidth = 50;
 
     useEffect(()=>{
+            const svg=d3.select(myElementRef.current);
 
-        const svg = d3.select(myElementRef.current)
+            const allRectData = svg.selectAll('rect').data(barData);
 
-        const allRectData = svg.selectAll('rect').data(barData)
-        
-        allRectData
+            allRectData
             .attr("width", rectWidth)
             .attr("stroke-width",3)
             .attr("stroke-dasharray","5 5")
-            .attr("stroke", "#8372A6")
+            .attr("stroke","red")
             .attr("fill","pink")
-            .attr("x", (d,i)=>{
-                // console.log("meow ",{d},{i})
-                return i* rectWidth
-            })
-            .attr("height", (d)=>{
+            .attr("x",(d,i)=>{
+                console.log("inside allRectData for rectangle",{d},{i})
+                    return i*rectWidth
+                })
+            .attr("height",(d)=>{
                 return d
             })
-
-
+      
     })
 
     return (

@@ -25,6 +25,10 @@ const S02API = () => {
             <E04selectionSelectAll/>
             <br/>
             <E06dataBinding/>
+            <br/>
+            <E07attStyle/>
+            <br/>
+            <E08reverseGraph/>
         </div>
     )
 }
@@ -43,8 +47,7 @@ export default S02API
             <E05selectionWithUseRef/>
             <br/>
             <E06dataBinding/>
-            <br/>
-            <E07attStyle/>
+            
             <br/>
             <E08reverseGraph/>
             <br/>
