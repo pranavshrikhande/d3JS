@@ -79,6 +79,18 @@ const E11styleBarGraphInD3 = () => {
             .attr('stroke','black')
             .attr('stroke-width',2)
 
+            //creating x-axis labels
+
+            svg.selectAll(".name-label")
+                .data(barData)
+                .enter()
+                .append('text')
+                .text((d)=> d.name)
+                .attr('class','name-label')
+                .attr('x',(d,i)=>  i*rectWidth + margin.left + 10)
+                .attr('y', totalHeight + margin.top)
+                .attr('transform', (d,i)=> `rotate(45 ${i*rectWidth + margin.left} ${totalHeight + margin.top + 20})`)
+                .attr('fill', 'gray')
    
        },[barData])
    
