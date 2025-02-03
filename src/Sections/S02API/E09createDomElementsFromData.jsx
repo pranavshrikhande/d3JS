@@ -11,26 +11,24 @@ const E09createDomElementsFromData = () => {
 
     useEffect(() => {
 
-        const svg = d3.select(myElementRef.current)
+        const svg = d3.select(myElementRef.current);
 
         const allRectData = svg.selectAll("rect")
-            .data(barData)
-            .enter()
-            .append("rect")
-            // calculate x-position based on its index
-            .attr("x", (d, i) => i * rectWidth)
-            // calculate y-position based on its index
-            .attr("y", (d, i) => 100 - d)
-            // set height based on the bound datum
-            .attr("height", (d) => d)
-            // rest of attributes are constant values
-            .attr("width", rectWidth)
-            .attr("stroke-width", 3)
-            .attr("stroke-dasharray", "5 5")
-            .attr("stroke", "#BDB0D9")
-            .attr("fill", "pink");
+                            .data(barData)
+                            .enter()
+                            .append("rect")
+                            .attr("x", (d,i)=> i * rectWidth)
+                            .attr("y",(d,i)=> 100 -d)
+                            .attr("height", (d)=> d)
+                            .attr("width", rectWidth)
+                            .attr("stroke-width",3)
+                            .attr("stroke-dasharray","5 5")
+                            .attr("stroke", "#BDB0D9")
+                            .attr("fill","pink");
 
-        // console.log({allRectData})
+        
+            console.log("Create DOm elements",allRectData);
+        
             
 
     })
