@@ -91,6 +91,22 @@ const E11styleBarGraphInD3 = () => {
                 .attr('y', totalHeight + margin.top)
                 .attr('transform', (d,i)=> `rotate(45 ${i*rectWidth + margin.left} ${totalHeight + margin.top + 20})`)
                 .attr('fill', 'gray')
+
+
+            //creating y-axis labels (AGE)
+
+            svg.selectAll(".age-label")
+                .data(barData)
+                .enter()
+                .append('text')
+                .text((d)=>d.age)
+                .attr('class', 'age-label')
+                .attr('x', (d,i)=> i*rectWidth + margin.left + rectWidth/2)
+                .attr('y',(d)=> margin.top + totalHeight - d.age - 5)
+                .attr('fill','#1F77B4')
+                .attr('text-anchor', 'middle')
+                .attr('font-weight', 'bold')
+            
    
        },[barData])
    
