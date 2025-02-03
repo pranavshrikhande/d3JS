@@ -40,6 +40,8 @@ const E11styleBarGraphInD3 = () => {
         left:40
     }
 
+    const yAxisLabelSpacing =20;
+
        useEffect(() => {
    
            const svg = d3.select(myElementRef.current);
@@ -107,7 +109,22 @@ const E11styleBarGraphInD3 = () => {
                 .attr('text-anchor', 'middle')
                 .attr('font-weight', 'bold')
             
-   
+            //create  y-axis fixed grid margin 20 value apart
+            const yAxisLabelData = d3.range(0, maxAge + yAxisLabelSpacing,yAxisLabelSpacing);
+
+
+
+            const yAxisLabels = svg.selectAll('.y-axis-label')
+                                .data(yAxisLabelData)
+                                .enter()
+                                .append('text')
+                                .text((d)=> d)
+                                .attr('x', margin.left - 5)
+                                .attr('y', (d)=>margin.top + totalHeight - d)
+                                .attr('fill', 'gray')
+                                .attr('text-anchor','end')
+                                .attr('alignment-baseline', 'middle')
+           
        },[barData])
    
        return (

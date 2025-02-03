@@ -183,4 +183,17 @@ TRANSLATE AND POSITION
     it was earlier 10,10
     but after translate it became 110,110
 
-    
+
+
+now we see, there is d3.range() 
+    it takes a value d3.range(10)
+        and returns an array of evenly spaced numbers
+        [0,1,2,3,...9]
+
+        d3.range(5,10)
+        [5,6,7,8,9]
+
+        d3.range(0,20,3)
+        [0,2,4,6,8,10,12,14,16,18]
+
+        
