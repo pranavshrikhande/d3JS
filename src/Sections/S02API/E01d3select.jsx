@@ -4,18 +4,15 @@ import * as d3 from 'd3'
 const E01d3select = () => {
 
     useEffect(()=>{
-
         const selectedElement = d3.select('.my-class')
-        // console.log({selectedElement})
 
-        selectedElement.style("background-color","blue")
+        selectedElement.style("background-color","blue");
 
+        console.log(selectedElement)
         const selectedElementP = d3.select('p')
-        // console.log({selectedElementP})
 
-        selectedElementP.style("color","red")
-
-
+        selectedElementP.style("color","red");
+        console.log({selectedElementP})
     })
 
     return (

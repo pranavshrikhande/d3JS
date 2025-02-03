@@ -2,3 +2,79 @@ SVG: scalable vector graphics, can add
 
 rectangle,
 text, path circle
+
+-------------------
+API
+------------------
+
+so we have API' for
+
+Layout calculation
+------
+    -Force
+    -Scales
+    -Continuous
+    -Quantize
+    -Quantile
+    -Threshold
+    -Ordinal
+
+DOM Manipulation
+-----
+    Selections
+    Selecting
+    Modifying
+
+Finishing touches
+---
+    Transitions
+
+
+- Now lets say you have to make a selection to a child element
+
+
+#Data Binding
+------------------------
+- First we need to bind data with element   
+- we take data, and map it with DOM element
+- two things
+    datum: 
+        lets say we have bar_data= [10,20,40,30,50,10]
+
+        as we have 6 data points , we have 6 rects below
+        <svg>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/> 
+        </svg>
+
+    d3.select('svg').select('rect').datum(bar_data)
+
+    what this does is, the very first rect will have all the 6 data in it
+    but that's not the objective, we want to have single data in all 6 rect's
+
+
+    we use datum for circle, 
+        d3.select('circle').datum('6')
+
+    data:
+        bar_data=[10,20,30,10,40];
+
+        <svg>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+            <rect/>
+        </svg>
+
+
+        d3.select('svg').selectAll('rect').data(bar_data)
+
+        
+
+
+    
