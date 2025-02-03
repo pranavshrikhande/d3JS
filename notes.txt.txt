@@ -134,3 +134,25 @@ attr: takes a selected element and can set its attribute
     Now we see our graph is inverted, 
 
 to fix this we have to make calculation, so that it substracts the height from total height that is set
+
+--------------------------
+CREATING DOM FROM DATA
+--------------------------
+
+- Lets say we have data of 100 points and it might change, decrease or increase,
+then we need to dynamically add rects for it. we cannot hardcode number of rects and then map data to it
+
+- so we would remove rects  and work on empty svg, we would append and enter accordingly
+
+svg.select("rect")
+
+- now we see we donot have rect, here d3 does a empty selection, but as soon as we give .data(bar_data), it understands
+    we have 5 data points inside bar_data, hare it should be array
+    next we do .enter(), this creates 5 placeholders 
+    next .append(), this creates elements, make sure you match the args in what was in .select(), it should be same
+
+    svg.selectAll("rect")
+        .data(bar_data)
+        .enter()
+        .append("rect")
+        

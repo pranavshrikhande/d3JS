@@ -29,6 +29,8 @@ const S02API = () => {
             <E07attStyle/>
             <br/>
             <E08reverseGraph/>
+            <br/>
+            <E09createDomElementsFromData/>
         </div>
     )
 }
