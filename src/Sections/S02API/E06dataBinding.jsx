@@ -12,26 +12,28 @@ const E06dataBinding = () => {
         const svg = d3.select(myElementRef.current)
 
         const firstRectDatum = svg.select('rect').datum(barData)
-        // console.log({firstRectDatum})
 
-        const allRectDatum = svg.selectAll('rect').datum(barData)
-        // console.log({allRectDatum})
+        console.log("Data Binding---->",firstRectDatum);
 
-        const allRectData = svg.selectAll('rect').data(barData)
-        // console.log({allRectData})
+        const allRectDatum = svg.selectAll('rect').datum(barData);
+        console.log("data binding using SelectAll---->",allRectDatum);
+ 
+        const allRectData = svg.selectAll('rect').data(barData);
+        console.log('databinding allRectData', allRectData);
 
     })
 
     return (
         <div>
             <h3>E06 data binding</h3>
-            <svg ref={myElementRef} height={20} width={20}>
+            <svg ref={myElementRef}>
                 <rect/>
                 <rect/>
                 <rect/>
                 <rect/>
                 <rect/>
             </svg>
+                
         </div>
     )
 }

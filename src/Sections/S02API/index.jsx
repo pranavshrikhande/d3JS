@@ -17,8 +17,24 @@ const S02API = () => {
         <div>
             <h2>Section 02 API</h2>
             <E01d3select />
-            <br />
+            <br/>
             <E02d3selectAll/>
+            <br/>
+            <E03selectionSelect/>
+            <br/>
+            <E04selectionSelectAll/>
+            <br/>
+            <E06dataBinding/>
+        </div>
+    )
+}
+
+export default S02API
+
+
+/**  
+            <br />
+           
             <br/>
             <E03selectionSelect/>
             <br/>
@@ -38,12 +54,4 @@ const S02API = () => {
             <br/>
             <E11styleBarGraphInD3/>
             <br/>
-            <E12PieChart/>
-            
-        </div>
-    )
-}
-
-export default S02API
-
-
+            <E12PieChart/> */

@@ -4,17 +4,12 @@ import * as d3 from 'd3'
 const E02d3selectAll = () => {
 
     useEffect(() => {
+      
         const selectedDiv = d3.selectAll(".my-class-new")
-        // console.log({selectedDiv})
 
-        selectedDiv.style("background-color", "aqua")
+        console.log(selectedDiv)
 
-        const selectAnchor = d3.selectAll('a')
-
-        // console.log({selectAnchor})
-
-        selectAnchor.style("color", "blue")
-
+        selectedDiv.style("background-color","aqua");
 
     }, [])
 
